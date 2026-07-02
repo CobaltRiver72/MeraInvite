@@ -30,6 +30,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Unit tests
+        run: npm test
+
       - name: Secret scan (gitleaks)
         run: |
           VERSION=8.18.4
