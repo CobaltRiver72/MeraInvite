@@ -1,0 +1,62 @@
+# ---- dependencies & build ----
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+# ---- SECRETS: never commit these ----
+# (git does NOT support inline comments after a pattern — keep comments on their own line)
+.env
+.env.*
+# re-allow ONLY the template:
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*-service-account*.json
+gcp-*.json
+r2-credentials*
+secrets/
+secrets*.json
+*secret*.json
+*credentials*.json
+credentials*
+
+# ---- Vercel / platform ----
+.vercel/
+
+# ---- Supabase local ----
+supabase/.branches/
+supabase/.temp/
+supabase/.env
+**/supabase/volumes/
+
+# ---- logs / OS / editor ----
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ---- test / coverage ----
+coverage/
+.nyc_output/
+
+# ---- local uploads / rendered output scratch ----
+/tmp/
+/uploads-local/
+
+# ---- Next.js generated ----
+next-env.d.ts
+
+# ---- fonts: licensed binaries are NOT committed (see fonts/README.md) ----
+/fonts/*
+!/fonts/README.md
+
+# ---- Sentry ----
+.sentryclirc
